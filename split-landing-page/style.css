@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  white-space: nowrap;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+  text-decoration: none;
+  color: white;
+  border: 0.2rem solid white;
+  font-size: 1rem;
+  width: 15rem;
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+}
+
+.split.left .btn:hover{
+  background-color: rgba(87, 84, 236, 1);
+  border-color: rgba(87, 84, 236, 1);
+
+}
+.split.right .btn:hover{
+  background-color: rgba(28, 122, 28, 1);
+  border-color: rgba(28, 122, 28, 1);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.7s ease-out;
+}
+
+.split.left {
+  left: 0;
+  background-image: url('ps5.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.split.left::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(87, 84, 236, 0.7);
+}
+
+.split.right::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 43, 43, 0.8);
+}
+
+.split.right {
+  right: 0;
+  background-image: url('xbox.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hover-left .split.left {
+  width: 75%;
+}
+.hover-left .split.right {
+  width: 25%;
+}
+
+.hover-right .split.left {
+  width: 25%;
+}
+.hover-right .split.right {
+  width: 75%;
+}
