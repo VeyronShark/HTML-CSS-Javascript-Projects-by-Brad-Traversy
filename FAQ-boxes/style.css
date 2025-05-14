@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+} 
+body {
+  background-color: rgb(224, 224, 224);
+  font-family: Muli, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  margin-top: 3rem;
+}
+
+.faq {
+  border: 1px solid black;
+  position: relative;
+  padding: 0 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  transition: all 0.2s ease-out;
+  height: 4rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.faq button {
+  position: absolute;
+  right: 1.2rem;
+  top: 1.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(194, 194, 194);
+}
+
+.faq-title {
+  margin-right: 2.3rem;
+}
+
+.faq button {
+  transition: all 0.3s ease-out;
+}
+
+.faq button i {
+  position: absolute;
+}
+
+.faq button .fa-times {
+  opacity: 0;
+}
+
+.faq button i{
+  transition: all 0.3s ease;
+}
+
+.faq.active::before{
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: steelblue;
+  font-size: 7rem;
+  position:absolute;
+  opacity: 0.2;
+  top: 0;
+  z-index: 0;
+}
+.faq.active {
+  background-color: white;
+  height: 7rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+.faq.active button {
+  transform: rotate(.5turn);
+  background-color: rgb(114, 114, 114);
+  color: white;
+}
+.faq.active .fa-times {
+  opacity: 1
+}
+.faq.active .fa-chevron-down {
+  opacity: 0;
+}
+.faq.active p{
+  visibility: visible;
+}
